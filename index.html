@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Precios | Griselda</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- scrip -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- fuente -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- METATAGS -->
+    <meta
+      property="og:url"
+      content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Remeras Griselda" />
+    <meta
+      property="og:description"
+      content="Mira las mejores remeras, los mejores precios, solo aqui"
+    />
+    <meta
+      property="og:image"
+      content="https://www.remerasweb.com/430-large_default/remera-loading-beer.jpg"
+    />
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <div class="swiper-container gallery-top">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image: url(./images/1.jpg)">
+          <div class="card">
+            <h1>Art.:remera n. 1</h1>
+            <h4>Descripcion:</h4>
+            <p>Esta remera es igual a todas, punto</p>
+            <br />
+            <h3><b>Precio:</b>300$</h3>
+          </div>
+        </div>
+
+        <div class="swiper-slide" style="background-image: url(./images/2.jpg)">
+          <div class="card">
+            <h1>Art.:remera n. 1</h1>
+            <h4>Descripcion:</h4>
+            <p>Esta remera es igual a todas, punto</p>
+            <h3><b>Precio:</b>300$</h3>
+          </div>
+        </div>
+
+        <div class="swiper-slide" style="background-image: url(./images/3.jpg)">
+          <div class="card">
+            <h1>Art.:remera n. 1</h1>
+            <h4>Descripcion:</h4>
+            <p>Esta remera es igual a todas, punto</p>
+            <h3><b>Precio:</b>300$</h3>
+          </div>
+        </div>
+
+        <div class="swiper-slide" style="background-image: url(./images/4.jpg)">
+          <div class="card">
+            <h1>Art.:remera n. 1.</h1>
+            <h4>Descripcion:</h4>
+            <p>Esta remera es igual a todas, punto</p>
+            <h3><b>Precio:</b>300$</h3>
+          </div>
+        </div>
+      </div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next swiper-button-white"></div>
+      <div class="swiper-button-prev swiper-button-white"></div>
+    </div>
+    <div class="swiper-container gallery-thumbs">
+      <!-- miniaturas de abajo -->
+      <div class="swiper-wrapper">
+        <div
+          class="swiper-slide"
+          style="background-image: url(./images/1.jpg)"
+        ></div>
+        <div
+          class="swiper-slide"
+          style="background-image: url(./images/2.jpg)"
+        ></div>
+        <div
+          class="swiper-slide"
+          style="background-image: url(./images/3.jpg)"
+        ></div>
+        <div
+          class="swiper-slide"
+          style="background-image: url(./images/4.jpg)"
+        ></div>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="../package/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var galleryThumbs = new Swiper(".gallery-thumbs", {
+        spaceBetween: 30,
+        slidesPerView: 3,
+
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+      });
+      var galleryTop = new Swiper(".gallery-top", {
+        spaceBetween: 10,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper: galleryThumbs,
+        },
+      });
+    </script>
+  </body>
+</html>
